@@ -1,0 +1,31 @@
+###
+GET http://localhost:3000
+
+###
+GET http://localhost:3000/books
+
+###
+GET http://localhost:3000/books/1
+
+###
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+  "title": "The dolls House",
+  "author": "Henrik Ibsen",
+  "year": 2010
+}
+
+###
+PUT http://localhost:3000/books/3
+Content-Type: application/json
+
+{
+  "bookName": "The Dolls House",
+  "authorName": "Henrik Ibsen",
+  "yearOfPublication": 2010
+}
+
+###
+DELETE http://localhost:3000/books/2

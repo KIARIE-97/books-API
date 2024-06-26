@@ -2,14 +2,20 @@
 import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
 import { bookRouter } from './Books/book.router'
+import "dotenv/config"
 
 const app = new Hono()
 
-app.route('/books', bookRouter)
 
 app.get('/', (c) => {
-  return c.text('Hello Hono!')
+  return c.text('my books repository🤪')
 })
+export default app;
+
+app.notFound((c) => {
+  return c.text('route not found!😶‍🌫️👽')
+})
+app.route('/', bookRouter)
 
 const port = 3000
 
