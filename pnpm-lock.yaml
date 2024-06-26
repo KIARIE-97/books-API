@@ -11,12 +11,15 @@ importers:
       '@hono/node-server':
         specifier: ^1.11.4
         version: 1.11.4
+      '@neondatabase/serverless':
+        specifier: ^0.9.4
+        version: 0.9.4
       dotenv:
         specifier: ^16.4.5
         version: 16.4.5
       drizzle-orm:
         specifier: ^0.31.2
-        version: 0.31.2(@types/pg@8.11.6)(pg@8.12.0)
+        version: 0.31.2(@neondatabase/serverless@0.9.4)(@types/pg@8.11.6)(pg@8.12.0)
       hono:
         specifier: ^4.4.8
         version: 4.4.8
@@ -459,6 +462,9 @@ packages:
   '@hono/node-server@1.11.4':
     resolution: {integrity: sha512-8TOiiiAqcFC6f62P7M9p6adQREAlWdVi1awehAwgWW+3R65/rKzHnLARO/Hu/466z01VNViBoogqatqXJMyItA==}
     engines: {node: '>=18.14.1'}
+
+  '@neondatabase/serverless@0.9.4':
+    resolution: {integrity: sha512-D0AXgJh6xkf+XTlsO7iwE2Q1w8981E1cLCPAALMU2YKtkF/1SF6BiAzYARZFYo175ON+b1RNIy9TdSFHm5nteg==}
 
   '@types/node@20.14.8':
     resolution: {integrity: sha512-DO+2/jZinXfROG7j7WKFn/3C6nFwxy2lLpgLjEXJz+0XKphZlTLJ14mo8Vfg8X5BWN6XjyESXq+LcYdT7tR3bA==}
@@ -933,6 +939,10 @@ snapshots:
 
   '@hono/node-server@1.11.4': {}
 
+  '@neondatabase/serverless@0.9.4':
+    dependencies:
+      '@types/pg': 8.11.6
+
   '@types/node@20.14.8':
     dependencies:
       undici-types: 5.26.5
@@ -959,8 +969,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.31.2(@types/pg@8.11.6)(pg@8.12.0):
+  drizzle-orm@0.31.2(@neondatabase/serverless@0.9.4)(@types/pg@8.11.6)(pg@8.12.0):
     optionalDependencies:
+      '@neondatabase/serverless': 0.9.4
       '@types/pg': 8.11.6
       pg: 8.12.0
 

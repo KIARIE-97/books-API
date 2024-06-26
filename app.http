@@ -12,9 +12,9 @@ POST http://localhost:3000/books
 Content-Type: application/json
 
 {
-  "title": "The dolls House",
-  "author": "Henrik Ibsen",
-  "year": 2010
+  "bookName": "The pearl",
+  "authorName": "Henrik Ibsen",
+  "yearOfPublication": 2010
 }
 
 ###
