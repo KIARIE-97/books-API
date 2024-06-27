@@ -10,7 +10,7 @@ const app = new Hono()
 // app.use('/books/*', cors()) // this will enable cors for all routes that start with /books 
 
 app.use(
-  '/books/*',
+  '/*',
   cors({
     origin: 'https://my-book-repository-app.vercel.app/',
     allowMethods: ['POST', 'GET', 'PUT', 'DELETE'],
