@@ -12,12 +12,8 @@ const app = new Hono()
 app.use(
   '/books/*',
   cors({
-    origin: '*',
+    origin: '*', // this will allow all origins
     allowMethods: ['POST', 'GET', 'PUT', 'DELETE']
-    // allowHeaders: ['X-Custom-Header', 'Upgrade-Insecure-Requests'],
-    // exposeHeaders: ['Content-Length', 'X-Kuma-Revision'],
-    // maxAge: 600,
-    // credentials: true,
   })
 )
 
