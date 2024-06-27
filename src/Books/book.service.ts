@@ -14,9 +14,9 @@ export const singleBookService = async (id: number): Promise<TIBooks | undefined
     })
 }
 //CREATE BOOK SERVICE
-export const createBookService = async (user: TIBooks): Promise<TIBooks> => {
-    await db.insert(booksTable).values(user)
-    return user;
+export const createBookService = async (book: TIBooks): Promise<TIBooks> => {
+    await db.insert(booksTable).values(book)
+    return book;
  }
  //UPDATE BOOK SERVICE
     export const updateBookService = async (id: number, book: TIBooks): Promise<TIBooks> => {

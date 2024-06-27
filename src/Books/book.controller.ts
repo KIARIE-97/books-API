@@ -30,7 +30,7 @@ export const createBook = async (c: Context) => {
        if (!createdBook){
         return c.text("book not created!👽", 404)
        }
-        return c.json({msg: createdBook}, 201);
+        return c.json({createdBook}, 201);
     } catch (error: any){
         return c.json({error: error?.message}, 400)
     }
