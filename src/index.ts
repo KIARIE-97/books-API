@@ -12,12 +12,12 @@ const app = new Hono()
 app.use(
   '/books/*',
   cors({
-    origin: 'https://book-repository-app-d1yu.vercel.app',
-    allowHeaders: ['X-Custom-Header', 'Upgrade-Insecure-Requests'],
+    origin: 'https://my-book-repository-app.vercel.app/',
     allowMethods: ['POST', 'GET', 'PUT', 'DELETE'],
-    exposeHeaders: ['Content-Length', 'X-Kuma-Revision'],
-    maxAge: 600,
-    credentials: true,
+    // allowHeaders: ['X-Custom-Header', 'Upgrade-Insecure-Requests'],
+    // exposeHeaders: ['Content-Length', 'X-Kuma-Revision'],
+    // maxAge: 600,
+    // credentials: true,
   })
 )
 
